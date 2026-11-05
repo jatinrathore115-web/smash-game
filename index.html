@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#1b1330" />
+    <meta name="description" content="LUMA RIFT — a first-person 3D glass-breaking adventure through four luminous worlds." />
+    <title>LUMA RIFT</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffd39b'/%3E%3Cstop offset='.5' stop-color='%23f6a7db'/%3E%3Cstop offset='1' stop-color='%23af94f6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M16 2l12 14-12 14L4 16z' fill='url(%23g)'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23fff'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>#rotate{display:none}</style>
+  </head>
+  <body>
+    <div id="app">
+      <div id="stage">
+        <canvas id="gl"></canvas>
+        <div id="ui"></div>
+      </div>
+      <div id="rotate"><div class="phone"></div><div>Rotate your device to landscape to play LUMA RIFT</div></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+    <script>
+      // If the game has not started (e.g. this source file was opened directly from disk), explain how to launch it.
+      setTimeout(function () {
+        if (window.__game) return;
+        document.body.innerHTML = '<div style="font:18px/1.6 Segoe UI,sans-serif;max-width:640px;margin:12vh auto;padding:32px;border-radius:20px;background:#fff4ee;color:#2a2142;box-shadow:0 10px 40px rgba(0,0,0,.15)"><h2 style="margin-top:0">LUMA RIFT needs to be launched</h2><p>This page was opened directly from disk, so the browser blocked the game scripts.</p><p><b>Easiest:</b> double-click <code>Play.bat</code> in the game folder.</p><p>Or in a terminal inside the folder run <code>npm run dev</code> and open <code>http://localhost:5173</code>.</p><p>Or run <code>npm run build</code> once and open <code>dist/index.html</code>.</p></div>';
+      }, 2500);
+    </script>
+  </body>
+</html>
